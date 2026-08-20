@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Siddiq Construction | Building Excellence </title>
+    <link rel="icon" type="image/png" href="imgs/logo.jpeg">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, sans-serif;
+      background: #f5f3ef;
+      color: #2c3e2f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+
+    /* header / logo */
+    .top-bar {
+      background: #1e2b21;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #d4b68a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+      border: 3px solid #e7d7b8;
+    }
+
+    .logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .company-title h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #f3e9ce;
+      letter-spacing: 2px;
+      line-height: 1.2;
+    }
+
+    .company-title p {
+      color: #ccb690;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    .whatsapp-header {
+      background: #25D366;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 40px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+      white-space: nowrap;
+    }
+
+    .whatsapp-header:hover {
+      background: #1da851;
+      transform: scale(1.03);
+    }
+
+    /* Hero / videos */
+    .video-section {
+      margin: 30px 0 20px;
+    
+    }
+
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      flex: 1 1 300px;
+      min-width: 280px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.25);
+      background: #000;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 220px;
+      display: block;
+      border: none;
+    }
+
+    /* picture grid */
+    .gallery-heading {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin: 40px 0 20px;
+      color: #2c4720;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 8px solid #b49250;
+      padding-left: 20px;
+    }
+
+    .picture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 25px 0 30px;
+    }
+
+    .pic-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .pic-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .pic-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pic-desc {
+      padding: 18px 16px 22px;
+      background: #fffef9;
+      flex: 1;
+    }
+
+    .pic-desc h3 {
+      font-size: 1.3rem;
+      color: #3a4e2b;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .pic-desc p {
+      color: #4a4a3c;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    /* CEO section */
+    .ceo-section {
+      background: linear-gradient(105deg, #f7f3e8 0%, #ede3cf 100%);
+      border-radius: 40px;
+      padding: 30px 30px;
+      margin: 40px 0 35px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.12);
+    }
+
+    .ceo-pic-small {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #b49250;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      border: 4px solid #fff;
+      flex-shrink: 0;
+    }
+
+    .ceo-pic-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ceo-details {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .ceo-details h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2e3b1f;
+    }
+
+    .ceo-details .role {
+      color: #9b7e4b;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 5px 0 12px;
+    }
+
+    .ceo-details p {
+      font-size: 1rem;
+      color: #3f4a36;
+      max-width: 600px;
+    }
+
+    /* team section */
+    .team-heading {
+      font-size: 2rem;
+      margin: 30px 0 20px;
+      font-weight: 700;
+      color: #2c4720;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .team-member {
+      background: #ffffff;
+      padding: 22px 18px;
+      border-radius: 28px;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+      border-left: 5px solid #b49250;
+      transition: 0.2s;
+    }
+
+    .team-member:hover {
+      background: #fcf9f2;
+      transform: scale(1.02);
+    }
+
+    .team-member h4 {
+      font-size: 1.3rem;
+      color: #2a3820;
+    }
+
+    .team-member .position {
+      color: #aa8b54;
+      font-weight: 600;
+      margin: 6px 0 10px;
+      font-size: 0.9rem;
+    }
+
+    .team-member p {
+      font-size: 0.9rem;
+      color: #4d4d3b;
+    }
+
+    /* footer */
+    .footer {
+      background: #1e2b21;
+      color: #ddd6c8;
+      padding: 35px 25px 20px;
+      margin-top: 30px;
+      border-radius: 35px 35px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-links div h4 {
+      color: #dbb468;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #cfc5ae;
+      text-decoration: none;
+      margin-bottom: 7px;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #f3d799;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      font-size: 1.8rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: #d6c094;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #f5e2b0;
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #aca590;
+      border-top: 1px solid #4a5540;
+      padding-top: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .company-title h1 {
+        font-size: 1.8rem;
+      }
+      .ceo-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo-area">
+      <div class="logo-img">
+        <!-- Random logo image (construction related abstract) -->
+        <img src="imgs/logo.jpeg" alt="Siddiq Construction logo">
+      </div>
+      <div class="company-title">
+        <h1>SIDDIQ CONSTRUCTION</h1>
+        <p>Trust Built in Concrete & Steel</p>
+      </div>
+    </div>
+    <a href="https://wa.me/+918169561129" target="_blank" class="whatsapp-header">
+      <i class="fab fa-whatsapp"></i> WhatsApp Us
+    </a>
+  </div>
+
+  <div class="container">
+    <!-- 3 YouTube videos autoplay muted (different random construction videos) -->
+    
+
+    <!-- 6 Pictures with details (minimum 100 words each) -->
+    <h2 class="gallery-heading"><i class="fas fa-image"></i> Our Signature Projects</h2>
+    <div class="picture-grid">
+      <div class="pic-card">
+        <img src="imgs/f1.jpeg" alt="Modern villa construction">
+        <div class="pic-desc">
+          <h3>Mivan Shuttering</h3>
+          <p>Aluminum formwork system for casting entire RCC structure — walls, slabs, beams — in one pour
+            Formwork assembly, alignment & level checks, de-shuttering sequence, concrete pressure handling.
+            Used for: High-rise residential towers, mass housing projects.
+
+</p>
+         </div>
+      </div>
+      <div class="pic-card">
+        <img src="imgs/f2.jpeg" alt="Commercial high rise">
+        <div class="pic-desc">
+          <h3>Rebar Fixing</h3>
+          <p>Cutting, bending, and tying reinforcement steel bars as per structural drawings  
+             Bar diameter, spacing, lap length, cover blocks, stirrups/ties — all
+             Reading BBS, binding wire tying, checking anchorage, maintaining concrete cover
+</p>
+            </div>
+      </div>
+      <div class="pic-card">
+        <img src="imgs/f3.jpeg" alt="Bridge infrastructure">
+        <div class="pic-desc">
+          <h3>Concrete & Post Pour</h3>
+         <p>Placing, compacting, finishing concrete + post-pour activities
+            Post pour: De-shuttering, hacking, crack inspection, leakage check, surface repair, curing continuation
+            Pour planning, pump coordination, curing management
+</p> 
+        </div>
+      </div>
+      <div class="pic-card">
+        <img src="imgs/f4.jpeg" alt="Hospital construction">
+        <div class="pic-desc">
+          <h3>Block Work</h3>
+          <P>Masonry using AAC blocks, concrete blocks, or fly-ash bricks to build walls
+            Block laying, lintel placement, door/window openings, chase cutting for MEP
+</P>        
+        </div>
+      </div>
+      <div class="pic-card">
+        <img src="imgs/f5.jpeg" alt="School campus">
+        <div class="pic-desc">
+          <h3>Gypsum Plaster</h3>
+          <p>Internal wall & ceiling finish using gypsum-based plaster instead of cement-sand plaster
+</p>  </div>
+      </div>
+      <div class="pic-card">
+        <img src="imgs/f6.jpeg" alt="Industrial warehouse">
+        <div class="pic-desc">
+          <h3>Excavation</h3>
+                    <p>Internal wall & ceiling finish using gypsum-based plaster instead of cement-sand plaster
+
+           </div>
+      </div>
+    </div>
+    <br/>
+    <div class="video-section">
+        <h2 class="gallery-heading"><i class="fas fa-image"></i> Our Projects Videos</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <!-- Random video 1: construction timelapse -->
+          <iframe src="imgs/vid.mp4" title="Construction timelapse" allow="autoplay; fullscreen" ></iframe>
+          
+        </div>
+        <div class="video-card">
+          <!-- Random video 2: modern building -->
+          <iframe src="imgs/vid1.mp4" title="Modern construction" allow="autoplay; fullscreen"></iframe>
+        </div>
+        <div class="video-card">
+          <!-- Random video 3: heavy machinery -->
+          <iframe src="imgs/vid2.mp4" title="Heavy equipment" allow="autoplay; fullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CEO small picture (random) + details -->
+    <div class="ceo-section">
+      <div class="ceo-pic-small">
+        <!-- Random CEO portrait image -->
+        <img src="imgs/ceo.jpeg" alt="CEO Ahmed Siddiq">
+      </div>
+      <div class="ceo-details">
+        <h2>Er.Md Qaif Siddiqui</h2>
+        <div class="role">Founder & CEO OF SIDDIQ CONSTRUCTION</div>
+        <p>Vision as Founder to build Siddiq Construction on the pillars of truthful construction no hidden costs, no quality compromise, only structures that earn client trust</p>
+        <p>Phone: +918169561129</p>
+        <p>Email: siddiqconstruction01@gmail.com</p>
+        <p>Location: Mumbai, Maharashtra</p>
+      </div>
+    </div>
+
+    <!-- Our Teams (no pictures) -->
+    <h2 class="team-heading"><i class="fas fa-users"></i> Core Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <h4>Er.Ateeque Khan</h4>
+        <div class="position">Structural Engineer</div>
+      </div>
+      <div class="team-member">
+        <h4>Er.Mazhar Shaik</h4>
+        <div class="position">Planning Engineer</div>
+      </div>
+      <div class="team-member">
+        <h4>Er.Mairaz Khan</h4>
+        <div class="position">Civil Engineer</div>
+      </div>
+      <div class="team-member">
+        <h4>Er.Aqib Khan</h4>
+        <div class="position">Civil Engineer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with links and social -->
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">About Us</a>
+        
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#">General Contracting</a>
+        <a href="#">Design-Build</a>
+        <a href="#">Renovation</a>
+        <a href="#">Consultancy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra </p>
+        <p><i class="fas fa-phone"></i> +918169561129 </p>
+        <p><i class="fas fa-envelope"></i> siddiqconstruction01@gmail.com </p>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/siddiqconstruction?igsh=MXF5OGx6OGc3M2ZtYg%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/+918169561129" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Siddiq Construction. Crafting landmarks with integrity. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
